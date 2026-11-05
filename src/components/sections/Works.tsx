@@ -12,6 +12,20 @@ import { config } from "../../constants/config";
 import { Header } from "../atoms/Header";
 import { TProject } from "../../types";
 
+const getVideoEmbedUrl = (videoUrl: string) => {
+  try {
+    const url = new URL(videoUrl);
+    if (url.hostname === "loom.com" || url.hostname.endsWith(".loom.com")) {
+      url.pathname = url.pathname.replace(/^\/share\//, "/embed/");
+      return url.toString();
+    }
+  } catch {
+    // Keep non-URL video sources unchanged so the iframe can handle them.
+  }
+
+  return videoUrl;
+};
+
 // -------------------------------
 // PROJECT CARD
 // -------------------------------
@@ -179,7 +193,7 @@ const Works = () => {
                   />
                 ) : (
                   <iframe
-                    src={activeProject.videoUrl}
+                    src={getVideoEmbedUrl(activeProject.videoUrl)}
                     className="absolute top-0 left-0 w-full h-full rounded-xl"
                     allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
                     allowFullScreen

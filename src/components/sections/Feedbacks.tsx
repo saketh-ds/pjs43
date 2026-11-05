@@ -51,6 +51,11 @@ export default function Certifications() {
       link: "https://www.credly.com/badges/03396b03-5398-469d-a324-5f81e7028348/public_url",
     },
     {
+      title: "SQL AI Developer Associate",
+      issuer: "Microsoft",
+      link: "https://learn.microsoft.com/api/credentials/share/en-gb/PAKALASIVASUBRAMANIYAMSAKETH-6044/A7C617BDE32E1F1F?sharingId=4DF8451DC7565730",
+    },
+    {
       title: "HackerRank — SQL (Advanced)",
       issuer: "HackerRank",
       link: "https://www.hackerrank.com/certificates/iframe/e55453db813c",
@@ -72,8 +77,8 @@ export default function Certifications() {
     },
     {
       title: "Build the Metaverse",
-      issuer: "Munjal / Birmingham City University",
-      link: "",
+      issuer: "Munjal Birmingham City University",
+      link: "https://drive.google.com/file/d/1wRMAdoiByJ6d2aQ4k4SscdS7s8CceMQu/view?usp=sharing",
     },
     {
       title: "AWS Academy Graduate-cloud",

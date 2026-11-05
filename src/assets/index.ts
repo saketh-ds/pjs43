@@ -16,6 +16,9 @@ import verzeo from "../assets/company/verzeo.png";
 import uber from "./uber.png";
 import gctp from "./gctp.png";
 import vechi from "./vechi.png";
+import civicBot from "./company/Civic Bot.jpg";
+import syntheticBank from "./company/SyntheticBank.jpg";
+import mediknow from "./company/mediknow.jpg";
 
 export {
   pjs,
@@ -33,5 +36,7 @@ export {
   gctp,
   vechi,
   uber,
-  
+  civicBot,
+  syntheticBank,
+  mediknow,
 };

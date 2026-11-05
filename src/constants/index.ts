@@ -16,7 +16,9 @@ import {
   uber,
   gctp,
   vechi,
-  
+  civicBot,
+  syntheticBank,
+  mediknow,
 } from "../assets";
 
 
@@ -37,7 +39,7 @@ export const navLinks = [
     id: "resume",
     title: "Resume",
     external: true,
-    url: "https://drive.google.com/uc?export=download&id=14PNIrMoVrsv1Qh5dAPCjJ2uVcBdYROby",
+    url: "https://drive.google.com/file/d/1DcXR-C5Z2uS8MQEtXiXgxaIh5gS2iMGL/view?usp=sharing",
   },
  
 ];
@@ -63,8 +65,21 @@ const services: TService[] = [
 ];
 
 const experiences: TExperience[] = [
+    {
+    title: "Junior Data Scientist Intern",
+    companyName: "Civic Bot",
+    icon: civicBot,
+    iconBg: "#383E56",
+    date: "May 2026 - Aug 2026",
+    points: [
+      "Developed a Python-based RAG chatbot using GPT-4o-mini and OpenAI embeddings, processing 142 council records across 3 UK councils.",
+      "Implemented FAISS vector search, Top-50 semantic retrieval and metadata filtering to deliver accurate, council-specific responses with source citations and hallucination control.",
+      "Built FastAPI with Pydantic validation, per-IP rate limiting and OpenAI error handling.",
+      "Targeted a 30% reduction in manual council enquiry-handling workload by automating 24/7 responses to UK residents across 3 local councils.",
+    ],
+  },
   {
-    title: "Construction Data Coordinator",
+    title: "Data Analyst ",
     companyName: "PJ & Constructions",
     icon: pjlogo,
     iconBg: "#383E56",
@@ -121,6 +136,102 @@ const experiences: TExperience[] = [
 
   
 const projects: TProject[] = [
+
+  
+{
+  name: "MEDIKNOW – Know Your Medicine",
+  description:
+    "Developed an AI-powered medicine information chatbot using Retrieval-Augmented Generation (RAG), enabling users to explore medicine information, ingredients, uses, side effects and safety precautions through natural-language queries.",
+
+  longDescription:
+    "Built a local-first AI-powered medicine information platform using Python, PostgreSQL, Sentence Transformers, FAISS and Mistral 7B through Ollama. The system processes a dataset of approximately 168,460 medicine records containing 22 information fields, including active ingredients, therapeutic uses, side effects, administration instructions and safety information. It implements a hybrid retrieval architecture combining PostgreSQL full-text search and FAISS semantic similarity search using 384-dimensional embeddings generated with all-MiniLM-L6-v2. Retrieved medicine information is passed to Mistral 7B through Ollama to generate context-grounded natural-language responses with source references. The backend is developed using FastAPI, with a responsive HTML, JavaScript and Tailwind CSS frontend. The platform incorporates medical safety guardrails, evidence-based response generation and source attribution to help users access medicine information while distinguishing general information from personalized medical advice.",
+
+  tags: [
+    { name: "Python", color: "blue-text-gradient" },
+    { name: "Generative AI", color: "green-text-gradient" },
+    { name: "RAG", color: "pink-text-gradient" },
+    { name: "Mistral 7B", color: "blue-text-gradient" },
+    { name: "Ollama", color: "green-text-gradient" },
+    { name: "FAISS", color: "pink-text-gradient" },
+    { name: "Sentence Transformers", color: "blue-text-gradient" },
+    { name: "PostgreSQL", color: "green-text-gradient" },
+    { name: "FastAPI", color: "pink-text-gradient" },
+    { name: "NLP", color: "blue-text-gradient" },
+    { name: "Tailwind CSS", color: "green-text-gradient" },
+    { name: "JavaScript", color: "pink-text-gradient" },
+  ],
+
+  image: mediknow,
+  images: [],
+
+  videoUrl:
+    "https://www.loom.com/share/a113cffa6bbf46f9896fdee13a1140c8",
+
+  reportLink:
+    "https://drive.google.com/file/d/1P8ybvFSXFgTZM5xMpkKwt4mqbUST9DdJ/view?usp=sharing",
+},
+
+{
+  name: "CivicBot – AI-Powered UK Council Assistant",
+
+  description:
+    "Developed an AI-powered council chatbot using Retrieval-Augmented Generation (RAG) to help UK residents access accurate, council-specific information across three local authorities: Erewash Borough Council, Amber Valley Borough Council and Derby City Council.",
+
+  longDescription:
+    "Built a Python-based RAG chatbot using GPT-4o-mini and OpenAI embeddings, processing 142 council information records across three UK councils. Implemented FAISS vector search with Top-50 semantic retrieval and metadata filtering to retrieve relevant, council-specific information and generate context-grounded responses with source citations. Designed the retrieval pipeline to improve answer relevance and reduce hallucinations by grounding responses in retrieved council information. Developed a FastAPI backend with Pydantic request validation, per-IP rate limiting and OpenAI API error handling to support reliable request processing. The platform aims to automate routine resident enquiries through 24/7 conversational support, targeting a 30% reduction in manual council enquiry-handling workload.",
+
+  tags: [
+    { name: "Python", color: "blue-text-gradient" },
+    { name: "Generative AI", color: "green-text-gradient" },
+    { name: "RAG", color: "pink-text-gradient" },
+    { name: "GPT-4o-mini", color: "blue-text-gradient" },
+    { name: "OpenAI Embeddings", color: "green-text-gradient" },
+    { name: "FAISS", color: "pink-text-gradient" },
+    { name: "Semantic Search", color: "blue-text-gradient" },
+    { name: "FastAPI", color: "green-text-gradient" },
+    { name: "Pydantic", color: "pink-text-gradient" },
+    { name: "Metadata Filtering", color: "blue-text-gradient" },
+    { name: "API Development", color: "green-text-gradient" },
+  ],
+
+  image: civicBot,
+  images: [],
+
+  videoUrl:
+    "https://www.loom.com/share/b2491870effe4cc49808860659dc8185",
+
+  reportLink:
+    "https://drive.google.com/file/d/1Jph14QcuhgGJg_72XvUaVEeGY1hvzFrj/view?usp=sharing",
+},
+
+
+  
+{
+  name: "Synthetic Bank – AI-Powered Banking Analytics",
+  description:
+    "Developed an AI-driven synthetic banking platform to analyse UK retail banking behaviour under changing macroeconomic conditions using machine learning, time-series analysis and synthetic data generation.",
+
+  longDescription:
+    "This project analyses UK macroeconomic and retail banking data from 2008 to 2025 using Python, Pandas, NumPy, Scikit-Learn and statistical modelling. It integrates Bank of England, ONS and FCA datasets to predict mortgage approvals, savings, current accounts, consumer credit and credit card lending. The platform uses Linear Regression, Random Forest, XGBoost and Logistic Regression for predictive modelling and economic-regime classification. CTGAN and TVAE generate synthetic banking customers, with TVAE achieving 92.73% overall data quality. The system generates 2.16 million customer-month records and includes interactive dashboards, customer evolution analysis and interest-rate stress testing through a full-stack application.",
+
+  tags: [
+    { name: "Python", color: "blue-text-gradient" },
+    { name: "Machine Learning", color: "green-text-gradient" },
+    { name: "Scikit-Learn", color: "pink-text-gradient" },
+    { name: "CTGAN & TVAE", color: "blue-text-gradient" },
+    { name: "FastAPI", color: "green-text-gradient" },
+    { name: "Next.js & React", color: "pink-text-gradient" },
+    { name: "SQLite", color: "blue-text-gradient" },
+    { name: "Time Series Analysis", color: "green-text-gradient" },
+  ],
+
+  image: syntheticBank,
+  images: [],
+  videoUrl: "https://www.loom.com/share/b2491870effe4cc49808860659dc8185",
+
+  reportLink: "https://drive.google.com/file/d/1POJ384UuMOL5Q_MbsdMqkPQ_UrN287R1/view?usp=sharing",
+},
+
   {
     name: "Uber Data Analytics using GCP",
     description:
@@ -140,7 +251,7 @@ const projects: TProject[] = [
     videoUrl: "",
 
     reportLink: "https://docs.google.com/document/d/1rFl3h3YGgn9M8eUf_L8DqDfhBi-YHRTgAFPWOYqxRL8/edit?usp=sharing",   // dummy working link
-    githubLink: "https://github.com/",  // dummy working link
+     
   },
 
   {
@@ -162,7 +273,7 @@ const projects: TProject[] = [
     videoUrl: "https://www.youtube.com/embed/W_WACs3-obA",
 
     reportLink: "https://drive.google.com/file/d/1G8BZmhwRpx9E7qbjV7bo9Pyyeg7aVkCX/view?usp=sharing",
-    githubLink: "https://github.com/",
+    
   },
 
   {
@@ -184,7 +295,7 @@ const projects: TProject[] = [
     videoUrl: "https://www.youtube.com/embed/25BoblVp21k",
 
     reportLink: "https://docs.google.com/document/d/1vw8uy1aHhxFpbe2nQn8dgk7DOQeLLLEoHti62nPMYp4/edit?usp=sharing",
-    githubLink: "https://github.com/",
+   
   },
 ];
 

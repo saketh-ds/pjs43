@@ -57,7 +57,7 @@ const Navbar = () => {
           <p className="flex cursor-pointer text-[18px] font-bold text-white">
             {config.html.title}
           </p>
-        </Link>
+        </Link>                                                                       
 
         {/* Desktop Menu */}
         <ul className="hidden list-none flex-row gap-10 sm:flex">

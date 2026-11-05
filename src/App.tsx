@@ -49,7 +49,7 @@ const App = () => {
 
               <div className="footer-links">
                 <a href="mailto:sakethpakala@gmail.com">Email:sakethpakala@gmail.com</a>
-                <a href="tel:+44 7352680497 ">Mobile:+44 7352680497</a>
+                <a href="tel:+91 6309379935">Mobile:+91 6309379935</a>
                 <a href="https://github.com/sakethpakala" target="_blank">GitHub</a>
                 <a href="#contact">Contact</a>
               </div>
